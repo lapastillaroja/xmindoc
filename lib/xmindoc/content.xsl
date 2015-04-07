@@ -85,52 +85,8 @@
         </xsl:for-each>
     </xsl:template>
 
-    <!-- h3 -->
-    <xsl:template match="//xmind:topics[count(ancestor-or-self::xmind:topics)=2]" xmlns:ns1="urn:xmind:xmap:xmlns:content:2.0">
-        <xsl:for-each select="xmind:topic">
-<!--            <xsl:call-template name="double_blank"/>-->
-            <h3>
-                <xsl:call-template name="output"></xsl:call-template>
-            </h3>
-            <xsl:apply-templates/>
-        </xsl:for-each>
-    </xsl:template>
-
-    <!-- h4 -->
-    <xsl:template match="//xmind:topics[count(ancestor-or-self::xmind:topics)=3]" xmlns:ns1="urn:xmind:xmap:xmlns:content:2.0">
-        <xsl:for-each select="xmind:topic">
-<!--            <xsl:call-template name="double_blank"/>-->
-            <h4>
-                <xsl:call-template name="output"></xsl:call-template>
-            </h4>
-            <xsl:apply-templates/>
-        </xsl:for-each>
-    </xsl:template>
-
-    <!-- h5 -->
-    <xsl:template match="//xmind:topics[count(ancestor-or-self::xmind:topics)=4]" xmlns:ns1="urn:xmind:xmap:xmlns:content:2.0">
-        <xsl:for-each select="xmind:topic">
-<!--            <xsl:call-template name="double_blank"/>-->
-            <h5>
-                <xsl:call-template name="output"></xsl:call-template>
-            </h5>
-            <xsl:apply-templates/>
-        </xsl:for-each>
-    </xsl:template>
-
-    <!-- h6 -->
-    <xsl:template match="//xmind:topics[count(ancestor-or-self::xmind:topics)=5]" xmlns:ns1="urn:xmind:xmap:xmlns:content:2.0">
-        <xsl:for-each select="xmind:topic">
-<!--            <xsl:call-template name="double_blank"/>-->
-            <h6>
-                <xsl:call-template name="output"></xsl:call-template>
-            </h6>
-            <xsl:apply-templates/>
-        </xsl:for-each>
-    </xsl:template>
-
     <!-- list: ul -->
-    <xsl:template match="//xmind:topics[count(ancestor-or-self::xmind:topics)&gt;=6]" xmlns:ns1="urn:xmind:xmap:xmlns:content:2.0">
+    <xsl:template match="//xmind:topics[count(ancestor-or-self::xmind:topics)&gt;=2]" xmlns:ns1="urn:xmind:xmap:xmlns:content:2.0">
         <ul>
             <xsl:for-each select="xmind:topic">
                 <!--            <xsl:call-template name="double_blank"/>-->
